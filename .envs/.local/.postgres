@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=summery_creator
+POSTGRES_USER=lRIPVOTbLiQoQTPRdaMXNrsmFODJZOHh
+POSTGRES_PASSWORD=C3kGyfR6uXQZNH0sc3oA937AbpkCHK2OLuny183BQ3K4pTrgMbShx0boDEk0BrN2
