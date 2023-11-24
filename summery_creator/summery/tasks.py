@@ -132,7 +132,7 @@ def handle_ml_callback(type: str, data: str | dict, uuid: str):
         lesson.save(update_fields=["name"])
     elif type == "time":
         try:
-            data = json.load(data)
+            data = json.loads(data)
         except json.JSONDecoder:
             ...
         term, definition = extract_term_and_definition(data["name"])

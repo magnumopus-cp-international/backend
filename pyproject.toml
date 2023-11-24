@@ -55,6 +55,7 @@ moviepy = "^1.0.3"
 textract = "^1.6.5"
 django-elasticsearch-dsl = "^8.0"
 fpdf2 = "^2.7.6"
+extract-msg = "0.28.7"
 
 
 [build-system]
