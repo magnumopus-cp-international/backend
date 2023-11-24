@@ -3,6 +3,7 @@ version: '3'
 volumes:
   summery_creator_local_postgres_data: {}
   summery_creator_local_postgres_data_backups: {}
+  summery_creator_local_elasticsearch_data: {}
 
 services:
   django: &django
@@ -83,4 +84,4 @@ services:
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms4g -Xmx4g"
     volumes:
-      - akarpov_local_elasticsearch_data:/usr/share/elasticsearch/data
+      - summery_creator_local_elasticsearch_data:/usr/share/elasticsearch/data
