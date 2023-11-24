@@ -54,6 +54,7 @@ python-magic = "^0.4.27"
 moviepy = "^1.0.3"
 textract = "^1.6.5"
 django-elasticsearch-dsl = "^8.0"
+fpdf2 = "^2.7.6"
 
 
 [build-system]

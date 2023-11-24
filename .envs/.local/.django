@@ -12,3 +12,5 @@ REDIS_URL=redis://redis:6379/0
 # Flower
 CELERY_FLOWER_USER=ixfFHrWpTseSuawcisVCbSwHIRDUEjlT
 CELERY_FLOWER_PASSWORD=CXg0nfsP7httCFA4kLKUdXYqpIzrm40sz9bwmgxYulVTmudtduSeCibjVKb22j0K
+
+ELASTIC_SEARCH=http://elasticsearch:9200/

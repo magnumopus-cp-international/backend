@@ -51,14 +51,10 @@ CELERY_TASK_EAGER_PROPAGATES = True
 # Your stuff...
 # ------------------------------------------------------------------------------
 
-CORS_ALLOW_ALL_ORIGINS = False
-
 CSRF_TRUSTED_ORIGINS = [
     "http://192.168.62.4",
     "http://*",
     "https://*",
 ]
-CORS_ALLOW_HEADERS = [
-    # "Access-Control-Allow-Origin",
-    # "Access-Control-Allow-Headers",
-]
+
+LIGHT_MODEL = False

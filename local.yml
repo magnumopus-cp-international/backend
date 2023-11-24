@@ -14,6 +14,7 @@ services:
     depends_on:
       - postgres
       - redis
+      - elasticsearch
     volumes:
       - .:/app:z
     env_file:
@@ -46,6 +47,7 @@ services:
     depends_on:
       - redis
       - postgres
+      - elasticsearch
     ports: []
     command: /start-celeryworker
 
@@ -66,3 +68,19 @@ services:
     ports:
       - "5555:5555"
     command: /start-flower
+
+
+  elasticsearch:
+    image: elasticsearch:8.11.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - xpack.security.enabled=false
+      - node.name=activity
+      - discovery.type=single-node
+      - cluster.name=ws-es-data-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms4g -Xmx4g"
+    volumes:
+      - akarpov_local_elasticsearch_data:/usr/share/elasticsearch/data

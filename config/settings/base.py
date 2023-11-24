@@ -86,6 +86,7 @@ THIRD_PARTY_APPS = [
     "corsheaders",
     "drf_spectacular",
     "summery_creator.contrib.chunked_upload",
+    "django_elasticsearch_dsl",
 ]
 
 LOCAL_APPS = [
@@ -364,4 +365,10 @@ CHANNEL_LAYERS = {
             "hosts": [env("REDIS_URL")],
         },
     },
+}
+
+# ELASTICSEARCH
+# ------------------------------------------------------------------------------
+ELASTICSEARCH_DSL = {
+    "default": {"hosts": env("ELASTIC_SEARCH", default="http://127.0.0.1:9200/")},
 }
